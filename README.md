@@ -3,8 +3,15 @@
 
 ## build
 
-
 ```
 qmake
 make
 ```
+
+## Run
+
+```
+./qthread
+```
+
+should print tic message every 500 ms
