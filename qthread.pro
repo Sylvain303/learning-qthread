@@ -6,5 +6,5 @@ CONFIG -= app_bundle
 
 QT -= gui
 
-SOURCES += main.cpp mythread.cpp engine.cpp
-HEADERS += mythread.h engine.h
+SOURCES += main.cpp engine.cpp mythread.cpp
+HEADERS += engine.h mythread.h

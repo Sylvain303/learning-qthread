@@ -1,1 +1,4 @@
 qthread
+*.o
+.*.swp
+moc_*

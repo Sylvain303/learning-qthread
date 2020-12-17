@@ -12,13 +12,15 @@ MyEngine::MyEngine(QString s) : name(s)
 
 void MyEngine::run()
 {
-    qDebug() << name << "engine starting" << endl;
-    
-    QTimer *t = new QTimer();
-    connect(t, &QTimer::timeout, this, [this] {on_timer_tic();});
+   qDebug() << name << "engine starting" << currentThreadId() << endl;
 
-    t->setInterval(500);
-    t->start();
+   QTimer *t = new QTimer();
+   connect(t, &QTimer::timeout, this, [this] {on_timer_tic();});
+
+   t->setInterval(500);
+   t->start();
+
+   exec();
 }
 
 void MyEngine::on_timer_tic()
